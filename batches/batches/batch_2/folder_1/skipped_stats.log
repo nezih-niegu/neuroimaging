@@ -1,0 +1,43 @@
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3191_MR_SAG_MPRAGE_GRAPPA/stats/aseg.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/aseg.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/aseg.stats
+Building the table..
+Writing the table to asegstats_vol_2020-10-11_2141.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/lh.aparc.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/lh.aparc.stats
+Building the table..
+Writing the table to lhaparc_vol_2020-10-11_2141.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/rh.aparc.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/rh.aparc.stats
+Building the table..
+Writing the table to rhaparc_vol_2020-10-11_2141.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/lh.aparc.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/lh.aparc.stats
+Building the table..
+Writing the table to lhaparc_area_2020-10-11_2141.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/rh.aparc.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/rh.aparc.stats
+Building the table..
+Writing the table to rhaparc_area_2020-10-11_2141.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/lh.aparc.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/lh.aparc.stats
+Building the table..
+Writing the table to lhaparc_thick_2020-10-11_2141.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3221_MR_MPRAGE_GRAPPA_/stats/rh.aparc.stats
+Skipping /usr/local/freesurfer/subjects/PPMI_3274_MR_SAG_FSPGR_3D/stats/rh.aparc.stats
+Building the table..
+Writing the table to rhaparc_thick_2020-10-11_2141.txt

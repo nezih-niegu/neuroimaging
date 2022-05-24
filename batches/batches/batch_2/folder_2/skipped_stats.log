@@ -1,0 +1,35 @@
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/aseg.stats
+Building the table..
+Writing the table to asegstats_vol_2020-10-08_1116.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/lh.aparc.stats
+Building the table..
+Writing the table to lhaparc_vol_2020-10-08_1116.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/rh.aparc.stats
+Building the table..
+Writing the table to rhaparc_vol_2020-10-08_1116.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/lh.aparc.stats
+Building the table..
+Writing the table to lhaparc_area_2020-10-08_1116.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/rh.aparc.stats
+Building the table..
+Writing the table to rhaparc_area_2020-10-08_1116.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/lh.aparc.stats
+Building the table..
+Writing the table to lhaparc_thick_2020-10-08_1116.txt
+SUBJECTS_DIR : /usr/local/freesurfer/subjects
+Parsing the .stats files
+Skipping /usr/local/freesurfer/subjects/PPMI_3544_MR_MPRAGEadni_br_raw/stats/rh.aparc.stats
+Building the table..
+Writing the table to rhaparc_thick_2020-10-08_1116.txt
