@@ -1,4 +1,4 @@
-# Neuroimaging Normative Reference — Shiny app + web service
+# Neuroimaging Normative Reference
 
 A rebuild of the original Python/R/bash neuroimaging pipeline as an **R Shiny
 frontend backed by a plumber REST web service and a patient database**.
