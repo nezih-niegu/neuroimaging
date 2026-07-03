@@ -1,0 +1,19 @@
+services:
+  neuroimaging:
+    build: .
+    image: neuroimaging-shiny
+    container_name: neuroimaging-shiny
+    ports:
+      - "3838:3838"   # Shiny frontend
+      - "8000:8000"   # plumber REST API
+    volumes:
+      # Persist the patient database (and cached models) across restarts.
+      - neuroimaging_data:/app/data
+    environment:
+      NEUROIMAGING_API_PORT: "8000"
+      NEUROIMAGING_APP_PORT: "3838"
+      NEUROIMAGING_API_URL: "http://127.0.0.1:8000"
+    restart: unless-stopped
+
+volumes:
+  neuroimaging_data:
