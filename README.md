@@ -1,4 +1,4 @@
-# Neuroimaging Normative Reference
+# Neuroimaging Normative Reference — Shiny app + web service
 
 A rebuild of the original Python/R/bash neuroimaging pipeline as an **R Shiny
 frontend backed by a plumber REST web service and a patient database**.
@@ -51,6 +51,9 @@ consumes. The original Python scripts are preserved in
 docker compose up --build
 ```
 
+If your Docker install uses the older standalone Compose, use the hyphenated
+form instead: `docker-compose up --build`.
+
 Then open:
 
 - **Shiny app:** http://localhost:3838
@@ -64,6 +67,17 @@ Plain `docker` without compose:
 docker build -t neuroimaging-shiny .
 docker run -p 3838:3838 -p 8000:8000 -v neuroimaging_data:/app/data neuroimaging-shiny
 ```
+
+The image is based on `rocker/r-ver`, which publishes **both `linux/amd64` and
+`linux/arm64`** builds, so it builds natively on Apple Silicon (M-series) Macs
+with no emulation. The first build compiles/downloads the R packages and
+pre-fits the reference models, so allow several minutes; later builds are
+cached.
+
+> **If you ever hit** `no match for platform in manifest`, you're pulling an
+> image tag that isn't published for your CPU architecture. Either use a
+> multi-arch base (as this Dockerfile does) or force emulation:
+> `DOCKER_DEFAULT_PLATFORM=linux/amd64 docker compose up --build`.
 
 ---
 

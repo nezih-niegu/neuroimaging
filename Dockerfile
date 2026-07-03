@@ -7,11 +7,19 @@
 #
 # Build:  docker build -t neuroimaging-shiny .
 # Run:    docker run -p 3838:3838 -p 8000:8000 neuroimaging-shiny
+#
+# Base image: rocker/r-ver publishes BOTH linux/amd64 and linux/arm64
+# (Apple Silicon) images, so this builds natively on an M-series Mac with
+# no emulation. We install Shiny ourselves along with the other packages.
 # ---------------------------------------------------------------------------
 FROM rocker/r-ver:4.3.3
 
-# System libraries needed by the R packages (curl/ssl for httr, xml2 for
-# some transitive deps, sqlite for RSQLite, fontconfig for PDF text).
+# System libraries the R packages need to build and run:
+#   libcurl/ssl            -> httr, and package downloads
+#   libxml2                -> transitive deps
+#   libsqlite3             -> RSQLite
+#   fontconfig/freetype/png-> ggplot2 + gridExtra PDF text rendering
+#   libcairo2/libxt        -> shiny / httpuv graphics stack
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libcurl4-openssl-dev \
         libssl-dev \
@@ -20,13 +28,27 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libfontconfig1-dev \
         libfreetype6-dev \
         libpng-dev \
+        libcairo2-dev \
+        libxt-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# R package dependencies. Pinned set kept small on purpose.
-RUN R -q -e "install.packages(c( \
-        'shiny','DT','ggplot2','DBI','RSQLite','plumber', \
-        'httr','jsonlite','gridExtra' \
-    ), repos='https://cloud.r-project.org')"
+# All R package dependencies (including shiny). rocker/r-ver points
+# install.packages() at the Posit Public Package Manager, which serves
+# precompiled binaries for the image's platform where available and falls
+# back to source otherwise.
+#
+# CRITICAL: verify every package can actually be loaded and stop the build
+# with a non-zero exit if any failed, instead of letting a broken package
+# surface later as a cryptic library() error during the model prebuild.
+RUN R -q -e "\
+    pkgs <- c('shiny','DT','ggplot2','DBI','RSQLite','plumber','httr','jsonlite','gridExtra'); \
+    install.packages(pkgs); \
+    ok <- sapply(pkgs, requireNamespace, quietly = TRUE); \
+    if (any(!ok)) { \
+        message('FAILED to install: ', paste(names(ok)[!ok], collapse=', ')); \
+        quit(status = 1); \
+    } else message('All R packages installed and loadable.') \
+    "
 
 WORKDIR /app
 

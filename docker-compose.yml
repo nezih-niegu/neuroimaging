@@ -3,6 +3,10 @@ services:
     build: .
     image: neuroimaging-shiny
     container_name: neuroimaging-shiny
+    # The rocker/r-ver base is multi-arch, so this builds natively on both
+    # Intel and Apple Silicon. If you ever need to force x86_64 emulation
+    # (e.g. a dependency without an arm64 build), uncomment the next line:
+    # platform: linux/amd64
     ports:
       - "3838:3838"   # Shiny frontend
       - "8000:8000"   # plumber REST API

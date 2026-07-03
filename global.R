@@ -3,6 +3,19 @@
 # service (plumber.R). Source this first from both.
 # -----------------------------------------------------------------------
 
+# Required packages. If any are missing/unloadable we stop with a clear
+# message naming them, rather than a truncated library() traceback (which
+# is what you get when a package failed to compile in the Docker image).
+.required_pkgs <- c("shiny", "DT", "ggplot2", "DBI", "RSQLite")
+.missing_pkgs <- .required_pkgs[!vapply(.required_pkgs, requireNamespace,
+                                        logical(1), quietly = TRUE)]
+if (length(.missing_pkgs) > 0) {
+  stop("Required R package(s) not installed or not loadable: ",
+       paste(.missing_pkgs, collapse = ", "),
+       ".\nInstall them with install.packages(c(",
+       paste(sprintf('\"%s\"', .missing_pkgs), collapse = ", "), ")).",
+       call. = FALSE)
+}
 suppressPackageStartupMessages({
   library(shiny)
   library(DT)
