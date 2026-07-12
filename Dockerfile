@@ -16,13 +16,16 @@ FROM rocker/r-ver:4.3.3
 
 # System libraries the R packages need to build and run:
 #   libcurl/ssl            -> httr, and package downloads
+#   libsodium              -> sodium (a plumber dependency)
 #   libxml2                -> transitive deps
 #   libsqlite3             -> RSQLite
 #   fontconfig/freetype/png-> ggplot2 + gridExtra PDF text rendering
 #   libcairo2/libxt        -> shiny / httpuv graphics stack
+#   zlib                   -> several packages' compression support
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libcurl4-openssl-dev \
         libssl-dev \
+        libsodium-dev \
         libxml2-dev \
         libsqlite3-dev \
         libfontconfig1-dev \
@@ -30,6 +33,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libpng-dev \
         libcairo2-dev \
         libxt-dev \
+        zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # All R package dependencies (including shiny). rocker/r-ver points
