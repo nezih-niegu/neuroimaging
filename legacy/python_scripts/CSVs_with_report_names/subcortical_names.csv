@@ -1,0 +1,67 @@
+Label,Name,Name_spanish,Description
+Lateral-Ventricle,Left Lateral Ventricle,Ventrículo lateral izquierdo,
+Inf-Lat-Vent,Left Inferior Lateral Ventricle,Ventrículo lateral inferior izquierdo,
+Cerebellum-White-Matter,Left Cerebellum: White Matter,Cerebelo izquierdo: sustancia blanca,
+Cerebellum-Cortex,Left Cerebellum: Cortex,Cerebelo izquierdo: corteza,
+Thalamus-Proper,Left Thalamus,Tálamo izquierdo,
+Caudate,Left Caudate,Núcleo caudado izquierdo,
+Putamen,Left Putamen,Putamen izquierdo,
+Pallidum,Left Pallidum,Globo pálido izquierdo,
+3rd-Ventricle,Third Ventricle,Tercer ventrículo,
+4th-Ventricle,Fourth Ventricle,Cuarto ventrículo,
+Brain-Stem,Brain Stem,Tallo cerebral,
+Hippocampus,Left Hippocampus,Hipocampo izquierdo,
+Amygdala,Left Amygdala,Amígdala izquierda,
+CSF,Cerebrospinal Fluid,Líquido cefalorraquídeo,
+Accumbens-area,Left Accumbens area,Núcleo accumbens izquierdo,
+VentralDC,Left Ventral Diencephalon,Diencéfalo ventral izquierdo ,
+Vessel,Vessel (hypointensities in left basal ganglia),Vasos sanguíneos (hipointensidades en ganglios basales izquierdos),
+Choroid-plexus,Left Choroid plexus,Plexo coroideo izquierdo,
+Lateral-Ventricle,Right Lateral Ventricle,Ventrículo lateral derecho,
+Inf-Lat-Vent,Right Inferior Lateral Ventricle,Ventrículo lateral inferior derecho,
+Cerebellum-White-Matter,Right Cerebellum: White Matter,Cerebelo derecho: sustancia blanca,
+Cerebellum-Cortex,Right Cerebellum: Cortex,Cerebelo derecho: corteza,
+Thalamus-Proper,Right Thalamus,Tálamo derecho,
+Caudate,Right Caudate,Núcleo caudado derecho,
+Putamen,Right Putamen,Putamen derecho,
+Pallidum,Right Pallidum,Globo pálido derecho,
+Hippocampus,Right Hippocampus,Hipocampo derecho,
+Amygdala,Right Amygdala,Amígdala derecha,
+Accumbens-area,Right Accumbens area,Núcleo accumbens derecho,
+VentralDC,Right Ventral Diencephalon,Diencéfalo ventral derecho ,
+Vessel,Vessel (hypointensities in right basal ganglia),Vasos sanguíneos (hipointensidades en ganglios basales derechos),
+Choroid-plexus,Right Choroid plexus,Plexo coroideo derecho,
+5th-Ventricle,Fifth ventricle,Quinto ventrículo,
+WM-hypointensities,White matter hypointensities,Hipointensidades en sustancia blanca,Dark white matter on a T1-weighted image
+Left-WM-hypointensities,-,-,
+Right-WM-hypointensities,-,-,
+non-WM-hypointensities,Gray matter hypointensities,Hipointensidades en sustancia gris,Dark gray matter on a T1-weighted image
+Left-non-WM-hypointensities,-,-,
+Right-non-WM-hypointensities,-,-,
+Optic-Chiasm,Optic chiasm,Quiasma óptico,
+CC_Posterior,Corpus callosum: posterior division,Cuerpo calloso: división posterior,The divisions of the cc are equally spaced in terms of distance along the primary eigendirection (pretty much the long axis) of the cc. 
+CC_Mid_Posterior,Corpus callosum: middle posterior division,Cuerpo calloso: división media posterior,The divisions of the cc are equally spaced in terms of distance along the primary eigendirection (pretty much the long axis) of the cc. 
+CC_Central,Corpus callosum: central division,Cuerpo calloso: división central,The divisions of the cc are equally spaced in terms of distance along the primary eigendirection (pretty much the long axis) of the cc. 
+CC_Mid_Anterior,Corpus callosum: middle anterior division,Cuerpo calloso: división media anterior,The divisions of the cc are equally spaced in terms of distance along the primary eigendirection (pretty much the long axis) of the cc. 
+CC_Anterior,Corpus callosum: anterior division,Cuerpo calloso: división anterior,The divisions of the cc are equally spaced in terms of distance along the primary eigendirection (pretty much the long axis) of the cc. 
+BrainSegVol,"Cerebral hemispheres, diencephalum, cerebellum, and cerebrospinal fluid","Hemisferios cerebrales, diencéfalo, cerebelo y líquido cefalorraquídeo","volume of all voxels in the aparc+aseg.mgz that are neither background nor brain stem. This is the same as pre-5.2 versions except that brain stem is not included. This will also include the ""vessel"", ""optic-chiasm"", and ""CSF"" segmentations. This is just a simple count of voxels in aparc+aseg.mgz. There are also additional stats for voxel-based supratentorial volume and surface based brain seg volume. "
+BrainSegVolNotVent,"Cerebral hemispheres, diencephalum, and cerebellum","Hemisferios cerebrales, diencéfalo y cerebelo","same as BrainSeg without ventricles (lateral, inferior lateral, 3rd, 4th, 5th), CSF, and choroid plexus"
+BrainSegVolNotVentSurf,"Cerebral hemispheres, diencephalum, and cerebellum (surface-based)","Hemisferios cerebrales, diencéfalo y cerebelo (basado en la superficie)",There are also additional stats for voxel-based supratentorial volume and surface based brain seg volume. 
+lhCortexVol,Cortex: left hemisphere,Corteza: hemisferio izquierdo,"volume inside the pial surface minus the volume inside the white surface minus tissue inside the ribbon that is not part of cortex (eg, hippocampus). This uses the surface-based volume calculation and is not a voxel count. It is approximately equal to the count of cortical label voxels in aparc+aseg.mgz"
+rhCortexVol,Cortex: right hemisphere,Corteza: hemisferio derecho,"volume inside the pial surface minus the volume inside the white surface minus tissue inside the ribbon that is not part of cortex (eg, hippocampus). This uses the surface-based volume calculation and is not a voxel count. It is approximately equal to the count of cortical label voxels in aparc+aseg.mgz"
+CortexVol,Cortex: both hemispheres,Corteza: ambos hemisferios,"volume inside the pial surface minus the volume inside the white surface minus tissue inside the ribbon that is not part of cortex (eg, hippocampus). This uses the surface-based volume calculation and is not a voxel count. It is approximately equal to the count of cortical label voxels in aparc+aseg.mgz"
+lhCerebralWhiteMatterVol,White matter: left hemisphere,Sustancia blanca: hemisferio izquierdo,"volume inside the white surface minus anything that is not WM. CerebralWhiteMatter includes hypointensities. Does not include cerebellar white matter or brainstem. This uses the surface-based volume computation for part of the calculation and counts voxels to subtract ""anything not in WM"". It is approximately equal to the count of WM voxels in aparc+aseg.mgz"
+rhCerebralWhiteMatterVol,White matter: right hemisphere,Sustancia blanca: hemisferio derecho,"volume inside the white surface minus anything that is not WM. CerebralWhiteMatter includes hypointensities. Does not include cerebellar white matter or brainstem. This uses the surface-based volume computation for part of the calculation and counts voxels to subtract ""anything not in WM"". It is approximately equal to the count of WM voxels in aparc+aseg.mgz"
+CerebralWhiteMatterVol,White matter: both hemispheres,Sustancia blanca: ambos hemisferios,"volume inside the white surface minus anything that is not WM. CerebralWhiteMatter includes hypointensities. Does not include cerebellar white matter or brainstem. This uses the surface-based volume computation for part of the calculation and counts voxels to subtract ""anything not in WM"". It is approximately equal to the count of WM voxels in aparc+aseg.mgz"
+SubCortGrayVol,"Basal ganglia, diencephalum and subtantia nigra","Ganglios basales, diencéfalo y sustancia negra","includes thalamus, caudate, putamen, pallidum, hippocampus, amygdala, accumbens, ventral DC, substancia nigra (if there). This is a simple voxel count of structures identified as subcortical GM. The function used to define this is IsSubCorticalGray() in cma.c. NOTE: SubCortGray excludes brain stem and cerebellum with 5.2. "
+TotalGrayVol,"Cortical, subcortical and cerebellar gray matter","Sustancia gris cortical, subcortical y cerebelar","total gray matter volume. This is simply the sum of lhCortex + rhCortex + SubCortGray + CerebellumGM. As such, it includes both surface-based volume calculations and voxel counts."
+SupraTentorialVol,Supratentorial cerebrospinal fluid and structures,Estructuras y líquido cefalorraquídeo supratentoriales,"includes everything except cerebellum (GM and WM) and brain stem. It is computed based on everything inside the pial surface plus any structures that might fall partially or totally outside of the pial, e.g., hippocampus, amygdala, corpus callosum, ventral DC, thalamus, ventricles, and choroid plexus. The function that determines the volume of structures outside of the supratentorium is SupraTentorialVolCorrection() in cma.c. Note that SupraTentorial includes ventricle, choroid plexus, and vessel. This uses surface-based volume calculations and voxel counts"
+SupraTentorialVolNotVent,Supratentorial structures,Estructuras supratentoriales,"same as SupraTentorial but subracting the volume ventricles (lateral,inferior lateral, 3rd, 4th, 5th), CSF, and choroid plexus."
+SupraTentorialVolNotVentVox,-,-,
+MaskVol,Brain mask,Máscara del encéfalo,"count of non-zero voxels in the brainmask.mgz. In general, this is not useful for reporting results but might be handy for QA."
+BrainSegVol-to-eTIV,"Ratio of cerebral hemispheres, diencephalum, cerebellum, and cerebrospinal fluid to intracraneal volume","Razón de volumen de hemisferios cerebrales, diencéfalo, cerebelo y líquido cefalorraquídeo a volumen intracraneal",
+MaskVol-to-eTIV,Ratio of brain mask to intracranial volume,Razón de volumen de la máscara del encéfalo a volumen intracraneal,
+lhSurfaceHoles,Number of holes in the reconstructed surface of the left hemisphere prior to fixing,Número de hoyos en la superficie reconstruida del hemisferio izquierdo antes de reparar,Number of defect holes in lh surfaces prior to fixing
+rhSurfaceHoles,Number of holes in the reconstructed surface of the right hemisphere prior to fixing,Número de hoyos en la superficie reconstruida del hemisferio derecho antes de reparar,Number of defect holes in rh surfaces prior to fixing
+SurfaceHoles,Number of holes in the reconstructed surfaces of both hemisphere prior to fixing,Número de hoyos en la superficie reconstruida de ambos hemisferios antes de reparar,Total number of defect holes in surfaces prior to fixing
+EstimatedTotalIntraCranialVol,Intracranial volume,Volumen intracraneal,This is the same number as the IntraCrainialVol (ICV) from pre-5.2 verions. The name was changed to help avoid confusion as to what this number is and is not. It is NOT is a count of voxels inside the skull. The eTIV is a metric computed from the amount of scaling in the talairach.xfm file. See http://surfer.nmr.mgh.harvard.edu/fswiki/eTIV

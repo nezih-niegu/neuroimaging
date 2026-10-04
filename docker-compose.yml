@@ -1,0 +1,38 @@
+# App only:                 docker compose up --build
+# App + FreeSurfer 8.2.0:   WITH_FREESURFER=1 docker compose up --build
+#   (put your FreeSurfer license at ./freesurfer_license/license.txt - mounted read-only)
+services:
+  neuroimaging:
+    build:
+      context: .
+      args:
+        WITH_FREESURFER: "${WITH_FREESURFER:-0}"
+        FS_VERSION: "${FS_VERSION:-8.2.0}"
+        FS_DEB: "${FS_DEB:-}"
+        WITH_MNE: "${WITH_MNE:-1}"
+    image: neuroimaging
+    container_name: neuroimaging
+    # FreeSurfer's Ubuntu package is x86_64-only; on Apple Silicon a
+    # FreeSurfer build needs emulation: uncomment the next line.
+    # platform: linux/amd64
+    ports:
+      - "3838:3838"   # Shiny frontend
+      - "8000:8000"   # REST API
+    volumes:
+      # patient DB, cached models, FreeSurfer SUBJECTS_DIR, uploads, job logs
+      - neuroimaging_data:/app/data
+      # FreeSurfer license (only needed for pipeline runs)
+      - ./freesurfer_license:/fs_license:ro
+      # Optional: process DICOMs already on the host. Paths under
+      # /app/data/incoming are accepted by the API / app.
+      # - /path/on/host/dicom:/app/data/incoming/host:ro
+    environment:
+      NEUROIMAGING_API_PORT: "8000"
+      NEUROIMAGING_APP_PORT: "3838"
+      NEUROIMAGING_API_URL: "http://127.0.0.1:8000"
+    # recon-all is memory-hungry; give it room
+    shm_size: "2gb"
+    restart: unless-stopped
+
+volumes:
+  neuroimaging_data:

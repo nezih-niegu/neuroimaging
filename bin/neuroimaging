@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# One entry point for the whole project.
+#
+#   sudo bin/neuroimaging setup [...]         install + configure everything (= ./setup.sh)
+#   bin/neuroimaging check                    is FreeSurfer / MNE ready on this machine?
+#   bin/neuroimaging process --subject ID --dicom DIR [--report] ...
+#                                             FreeSurfer pipeline (see --help)
+#   bin/neuroimaging visualize --subject ID [--no-3d] [--bem]
+#                                             MNE-Python figures for a processed subject
+#   bin/neuroimaging reference [--unmatched] [--rebuild]
+#                                             which ICBM/PPMI/ADNI subjects the models use
+#   bin/neuroimaging cohort --cohort NAME --dicom-root DIR --demographics CSV
+#                                             process a control cohort into the reference
+#   bin/neuroimaging ingest --subject-dir DIR --age N [...]
+#                                             report + DB + PDF for a processed subject
+#   bin/neuroimaging serve                    REST API (8000) + Shiny app (3838)
+#   bin/neuroimaging api | app                just one of them
+#   bin/neuroimaging test                     pipeline test suite (stub FreeSurfer)
+set -euo pipefail
+ROOT="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+cmd="${1:-help}"; shift || true
+case "$cmd" in
+  setup)   exec "$ROOT/setup.sh" "$@" ;;
+  check)   exec "$ROOT/pipeline/check_environment.sh" "$@" ;;
+  visualize|visualise) exec "$ROOT/pipeline/visualize.sh" "$@" ;;
+  process) exec "$ROOT/pipeline/neuroimaging-pipeline.sh" "$@" ;;
+  ingest)  exec Rscript "$ROOT/bin/ingest_subject.R" "$@" ;;
+  reference) exec Rscript "$ROOT/bin/reference_report.R" "$@" ;;
+  cohort)  exec "$ROOT/pipeline/process_cohort.sh" "$@" ;;
+  api)     cd "$ROOT"; exec Rscript run_api.R ;;
+  app)     cd "$ROOT"; exec Rscript run_app.R ;;
+  serve)   cd "$ROOT"; exec bash "$ROOT/entrypoint.sh" ;;
+  test)    exec "$ROOT/tests/test_pipeline.sh" ;;
+  *) sed -n '2,18p' "$0" | sed 's/^# \{0,1\}//'; [[ "$cmd" == help || "$cmd" == -h || "$cmd" == --help ]] ;;
+esac

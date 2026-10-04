@@ -1,0 +1,15 @@
+# runtime data (patient DB, FreeSurfer subjects, uploads, outputs, job logs)
+data/patients.sqlite
+data/reference_models.rds
+data/freesurfer_subjects/
+data/incoming/
+data/processed/
+data/jobs/
+# FreeSurfer license and installer packages
+freesurfer_license/license.txt
+license.txt
+*.deb
+__pycache__/
+*.pyc
+.Rhistory
+.RData

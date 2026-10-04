@@ -1,0 +1,37 @@
+Label,Name,Name_spanish
+Bankssts,Banks of the superior temporal sulcus,Porción posterior del surco temporal superior
+caudalanteriorcingulate,Cingulate cortex: Caudal anterior division,Circunvolución del cíngulo: división caudal anterior
+caudalmiddlefrontal,Middle frontal gyrus: Caudal division,Giro frontal medio: división caudal
+cuneus,Cuneus cortex,Cuña
+entorhinal,Entorhinal cortex,Corteza entorrinal
+fusiform,Fusiform gyrus,Giro fusiforme
+inferiorparietal,Inferior parietal cortex,Corteza parietal inferior
+inferiortemporal,Inferior temporal gyrus,Giro temporal inferior
+isthmuscingulate,Cingulate cortex: Isthmus division,Circunvolución del cíngulo: división del istmo
+lateraloccipital,Lateral occipital cortex,Corteza occipital lateral
+lateralorbitofrontal,Orbitofrontal cortex: Lateral division,Corteza orbitofrontal: división lateral
+lingual,Lingual gyrus,Giro lingual
+medialorbitofrontal,Orbitofrontal cortex: Medial division,Corteza orbitofrontal: división medial
+middletemporal,Middle temporal gyrus,Giro temporal medio
+parahippocampal,Parahippocampal gyrus,Giro parahipocampal
+paracentral,Paracentral lobule,Lóbulo paracentral
+parsopercularis,Inferior frontal gyrus: Pars opercularis,Giro frontal inferior: porción opercular
+parsorbitalis,Inferior frontal gyrus: Pars orbitalis,Giro frontal inferior: porción orbitaria
+parstriangularis,Inferior frontal gyrus: Pars triangularis,Giro frontal inferior: porción triangular
+pericalcarine,Pericalcarine cortex,Corteza pericalcarina
+postcentral,Postcentral gyrus,Giro poscentral
+posteriorcingulate,Cingulate cortex: Posterior division,Circunvolución del cíngulo: división posterior
+precentral,Precentral gyrus,Giro precentral
+precuneus,Precuneus cortex,Precuña
+rostralanteriorcingulate,Cingulate cortex: Rostral anterior division,Circunvolución del cíngulo: división rostral anterior
+rostralmiddlefrontal,Middle frontal gyrus: Rostral division,Giro frontal medio: división rostral
+superiorfrontal,Superior frontal gyrus,Giro frontal superior
+superiorparietal,Superior parietal cortex,Corteza parietal superior
+superiortemporal,Superior temporal gyrus,Giro temporal superior
+supramarginal,Supramarginal gyrus,Giro supramarginal
+frontalpole,Frontal pole,Polo frontal
+temporalpole,Temporal pole,Polo temporal
+transversetemporal,Transverse temporal cortex,Giro temporal transverso
+insula,Insula,Ínsula
+BrainSegNotVent,"Cerebral hemispheres, diencephalon and cerebellum (without ventricles)","Hemisferios cerebrales, diencéfalo y cerebelo (sin ventrículos)"
+eTIV,Total intracranial volume,Volumen intracraneal

@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+# setup.conf - settings for ./setup.sh (copy this file to setup.conf and edit).
+# Plain KEY=value lines; command-line options to setup.sh override these.
+# ---------------------------------------------------------------------------
+
+# FreeSurfer (official Ubuntu 24 package, x86_64 only)
+INSTALL_FREESURFER=yes
+FS_VERSION=8.2.0
+# Use an already-downloaded package instead of downloading it (several GB):
+FS_DEB=
+# Your FreeSurfer license.txt (free: https://surfer.nmr.mgh.harvard.edu/registration.html).
+# If empty, setup looks in ./freesurfer_license/license.txt and ~/license.txt.
+FS_LICENSE_FILE=
+# MATLAB runtime R2019b for hippocampal-subfield / brainstem segmentation
+INSTALL_MCR=yes
+
+# MNE-Python for brain visualisation (surfaces on T1, 3D parcellation, HTML report)
+INSTALL_MNE=yes
+MNE_VENV=/opt/neuroimaging/venv
+
+# Where data lives (defaults are inside the project's data/ folder)
+SUBJECTS_DIR=
+PROCESSED_DIR=
+# Control-cohort reference data: one folder per cohort (ICBM/, PPMI/, ADNI/, ...)
+# with stats tables + a <COHORT>_*.csv of Subject/Age. Default: data/reference/batches
+# (FreeSurfer 6 tables, bundled). After reprocessing with process_cohort.sh use
+# data/reference/batches_fs8.
+REFERENCE_DIR=
+
+# Run the Shiny app + API as a systemd service that starts at boot
+INSTALL_SERVICE=no
+# Account that owns the data and runs the service (default: the user who ran sudo)
+SERVICE_USER=
+API_PORT=8000
+APP_PORT=3838
+
+# Run the self-test after installing
+RUN_TESTS=yes

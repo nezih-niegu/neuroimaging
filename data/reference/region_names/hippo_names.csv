@@ -1,0 +1,27 @@
+Label,Name,Name_spanish
+hippocampal_tail,Left Tail,Cola del hipocampo izquierdo
+subiculum,Left Subiculum,Subículo izquierdo
+CA1,Left CA1,CA1 izquierdo
+hippocampal-fissure,Left Hippocampal Fissure ,Surco hipocampal izquierdo
+presubiculum,Left Presubiculum,Presubículo izquierdo
+parasubiculum,Left Parasubiculum,Parasubículo izquierdo
+molecular_layer_HP,Molecular layer of left subiculum and CA regions,Capa molecular del subículo y las regiones CA izquierdos
+GC-ML-DG,Granule cell layer of left dentate gyrus ,Capa de células granulosas del giro dentado izquierdo
+CA3,Left CA2/3 ,CA2/3 izquierdo
+CA4,Left CA4,CA4 izquierdo
+fimbria,Left Fimbria,Fimbria izquierda
+HATA,Left Hippocampus-amygdala-transition-area,Área de transición hipocampo-amigdalina izquierda
+whole_hippocampus,Left Hippocampus,Hipocampo izquierdo
+hippocampal_tail,Right Tail,Cola del hipocampo derecho
+subiculum,Right Subiculum,Subículo derecho
+CA1,Right CA1,CA1 derecho
+hippocampal-fissure,Right Hippocampal Fissure ,Surco hipocampal derecho
+presubiculum,Right Presubiculum,Presubículo derecho
+parasubiculum,Right Parasubiculum,Parasubículo derecho
+molecular_layer_HP,Molecular layer of right subiculum and CA regions,Capa molecular del subículo y las regiones CA derechos
+GC-ML-DG,Granule cell layer of right dentate gyrus ,Capa de células granulosas del giro dentado derecho
+CA3,Right CA2/3 ,CA2/3 derecho
+CA4,Right CA4,CA4 derecho
+fimbria,Right Fimbria,Fimbria derecha
+HATA,Right Hippocampus-amygdala-transition-area,Área de transición hipocampo-amigdalina derecha
+whole_hippocampus,Right Hippocampus,Hipocampo derecho

@@ -1,0 +1,10 @@
+data/patients.sqlite
+data/reference_models.rds
+data/freesurfer_subjects
+data/incoming
+data/processed
+data/jobs
+freesurfer_license
+legacy
+.git
+**/__pycache__
